@@ -60,7 +60,7 @@ func main() {
 	app.POST("/sentry/callback", func(ctx *gin.Context) {
 		m := make(map[string]interface{}, 0)
 		ctx.ShouldBind(&m)
-		wxwork.Send(m["message"].(string))
+		wxwork.Send(m["message"].(string), m["url"].(string))
 	})
 	app.Run(":3000")
 }

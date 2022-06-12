@@ -21,6 +21,7 @@ type SendMsg struct {
 type MsgContent struct {
 	ErrorMsg string `json:"error_msg"`
 	OriginIp string `json:"origin_ip"`
+	ErrorUrl string `json:"error_url"`
 }
 
 // template exchange
